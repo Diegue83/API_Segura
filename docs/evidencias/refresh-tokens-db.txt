@@ -1,0 +1,9 @@
+     id     |  family  | revoked | rotated |  expires   
+------------+----------+---------+---------+------------
+ cmvq77jqe0 | 7b02e322 | t       | t       | 2026-11-03
+ cmvq77kyg0 | 7b02e322 | t       | f       | 2026-11-03
+ cmvq77ly50 | efd79042 | t       | f       | 2026-11-03
+ cmvq77mkp0 | 6698a9a8 | t       | f       | 2026-11-03
+ cmvq77nf90 | b060eab6 | t       | f       | 2026-11-03
+(5 filas)
+

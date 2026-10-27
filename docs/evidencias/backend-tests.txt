@@ -1,0 +1,26 @@
+tests/auth.test.js
+  ✓ registration and login › registers a user and stores only a bcrypt hash of the password (1445 ms)
+  ✓ registration and login › rejects a duplicate email with 409 (2233 ms)
+  ✓ registration and login › rejects invalid input with a 400 validation error (36 ms)
+  ✓ registration and login › logs in with valid credentials (2101 ms)
+  ✓ registration and login › uses the same generic message for a wrong password and an unknown email (3632 ms)
+  ✓ registration and login › rejects malformed JSON with a safe error (21 ms)
+  ✓ refresh-token lifecycle › stores only the SHA-256 hash of refresh tokens (1085 ms)
+  ✓ refresh-token lifecycle › rotation returns a different refresh token (1128 ms)
+  ✓ refresh-token lifecycle › reuse of an old token revokes the newer token family token (1278 ms)
+  ✓ refresh-token lifecycle › logout makes the refresh token unusable (1135 ms)
+  ✓ refresh-token lifecycle › logout-all revokes refresh tokens from every session (2223 ms)
+tests/tasks.test.js
+  ✓ task authentication › rejects requests without a token (35 ms)
+  ✓ task authentication › rejects a token signed with the wrong secret (65 ms)
+  ✓ task authentication › rejects a refresh token used as an access token (1383 ms)
+  ✓ task CRUD › creates, lists, updates and deletes a task (1186 ms)
+  ✓ task CRUD › ignores a client-supplied ownerId (2203 ms)
+  ✓ task CRUD › validates task payloads, pagination bounds and IDs (1187 ms)
+  ✓ cross-user authorization (IDOR) › User A cannot read, update or delete User B task (2201 ms)
+tests/health.test.js
+  ✓ health endpoint › returns a healthy status (25 ms)
+  ✓ health endpoint › does not expose the x-powered-by header and sets security headers (13 ms)
+
+Test Suites: 3 passed, 3 total
+Tests:       20 passed, 20 total

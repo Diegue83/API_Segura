@@ -1,0 +1,24 @@
+== Health ==
+{"status":"ok"}
+== Setup: register a local test account ==
+access and refresh tokens are set (values not printed)
+== Protected task routes ==
+GET /tasks without token -> 401
+POST /tasks with token -> 201
+GET /tasks?page=1&limit=20 -> 200, items: Review API security
+GET /tasks?limit=1000 (over max) -> 400
+== Task 1: Rotation ==
+refresh with valid token -> 200
+different
+== Task 2: Reuse detection ==
+refresh with old token -> 401
+refresh with newest token after reuse -> 401
+== Task 3: Logout ==
+logout -> 204
+refresh after logout -> 401
+== Task 4: Logout-all ==
+logout-all -> 204
+refresh session one after logout-all -> 401
+refresh session two after logout-all -> 401
+== Generic login failure ==
+login with wrong password -> 401 {"error":{"code":"UNAUTHENTICATED","message":"Invalid email or password."}}
